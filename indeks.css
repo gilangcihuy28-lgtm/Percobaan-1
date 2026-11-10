@@ -1,0 +1,265 @@
+/* Reset Dasar & Variabel */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --warna-utama: #2c3e50;
+    --warna-aksen: #e74c3c;
+    --warna-bg: #f8f9fa;
+    --warna-teks: #333333;
+    --warna-teks-muda: #666666;
+    --font-utama: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-utama);
+    background-color: var(--warna-bg);
+    color: var(--warna-teks);
+    line-height: 1.6;
+}
+
+/* Header & Navigasi */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--warna-utama);
+}
+
+.logo span {
+    color: var(--warna-aksen);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--warna-teks);
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--warna-aksen);
+}
+
+.btn-member {
+    background-color: var(--warna-utama);
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 6px;
+}
+
+.btn-member:hover {
+    background-color: #1a252f;
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    color: #ffffff;
+    border-radius: 16px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Kategori */
+.kategori-section, .katalog-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--warna-aksen);
+}
+
+.kategori-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.kategori-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #eef2f5;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kategori-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.kategori-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--warna-utama);
+}
+
+.kategori-card p {
+    color: var(--warna-teks-muda);
+    font-size: 0.9rem;
+}
+
+/* Katalog / Daftar Buku */
+.buku-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.buku-card {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    border: 1px solid #eef2f5;
+    display: flex;
+    flex-direction: column;
+}
+
+.buku-cover {
+    height: 200px;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Menggunakan background warna solid estetik sebagai pengganti gambar cover sementara */
+.placeholder-1 { background-color: #d5dbdb; }
+.placeholder-2 { background-color: #aed6f1; }
+.placeholder-3 { background-color: #f9e79f; }
+
+.tag-kategori {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--warna-utama);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.buku-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.buku-judul {
+    font-size: 1.3rem;
+    color: var(--warna-utama);
+    margin-bottom: 5px;
+}
+
+.buku-penulis {
+    font-size: 0.9rem;
+    color: var(--warna-teks-muda);
+    margin-bottom: 15px;
+}
+
+.buku-penulis span {
+    font-weight: 600;
+    color: var(--warna-teks);
+}
+
+.buku-deskripsi {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.btn-baca {
+    text-decoration: none;
+    color: var(--warna-utama);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-bottom: 2px solid var(--warna-utama);
+    align-self: flex-start;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.btn-baca:hover {
+    color: var(--warna-aksen);
+    border-color: var(--warna-aksen);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--warna-utama);
+    color: #ffffff;
+    margin-top: 80px;
+    font-size: 0.9rem;
+}
+
+/* Responsivitas Layar HP */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav a {
+        margin: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
